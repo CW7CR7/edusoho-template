@@ -1,0 +1,171 @@
+$font: 2rem "Helvetica Neue";
+$lightwhite:#f5f5f5;
+$red:#cf010e;
+$gray:#717171;
+$deepgray:#313131;
+$border:1px solid #e4ecf3;
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+html,
+h1 {
+    font-size: 10px;
+    background-color: $lightwhite;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    .main-content {
+        font: $font;
+        letter-spacing: 0.03em;
+        color: $gray;
+        width: 60%;
+        background-color: transparent;
+        height: 100px;
+        margin: 0 auto;
+        .title-container {
+            background-color: transparent;
+            height: 110px;
+            .btn-primary {
+                letter-spacing: 0.1em;
+                color: #fff;
+                border-color: #9c010b;
+                background-color: $red;
+                font-size: 14px;
+                padding: 12px 35px;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+        }
+        .classification-container {
+            background-color: #fff;
+            width: 100%;
+            padding-left: 10px;
+            font-size: 14px;
+            border: $border;
+            .classification {
+                height: 50px;
+                background-color: transparent;
+                justify-content: flex-start;
+                display: flex;
+                &>span {
+                    cursor: pointer;
+                    align-self: center;
+                    width: 110px;
+                    height: 50px;
+                    line-height: 50px;
+                    background-color: transparent;
+                }
+                &>span.activeClassification {
+                    color: #cf010e;
+                }
+            }
+        }
+        .tab-container {
+            position: relative;
+            .layui-tab {
+                width: 100%;
+                float: left;
+                .layui-tab-title {
+                    background-color: #fff;
+                    border: 0.1rem solid #e6e6e6;
+                    .layui-this {
+                        color: #fff;
+                        background-color: #cf010e;
+                    }
+                }
+                .layui-tab-content {
+                    .layui-tab-item {
+                        li.showLi {
+                            float: left;
+                            width: 28rem;
+                            height: 26.6rem;
+                            box-sizing: border-box;
+                            background-color: fff;
+                            border: $border;
+                            padding: 0rem 0.5rem;
+                            /*!滑过样式*/
+                            transition-property: all;
+                            transition-duration: 0.2s;
+                            transition-timing-function: linear;
+                            &:hover {
+                                transition-property: all;
+                                transition-duration: 0.2s;
+                                transition-timing-function: linear;
+                                box-shadow: 0rem 0.7rem 0.7rem 0.1rem #d0d6df;
+                                transform: translateY(-1rem);
+                            }
+                            &>a>img {
+                                width: 27rem;
+                                height: 15.1rem;
+                            }
+                            &>div.introduce {
+                                width: 27rem;
+                                height: 8.4rem;
+                                background-color: pink;
+                                padding: 1.6rem 0.8rem;
+                                box-sizing: border-box;
+                                div.title {
+                                    color: $deepgray;
+                                    font: 1.4rem "Helvetica Neue";
+                                    width: 25.4rem;
+                                    height: 2rem;
+                                    margin-bottom: 1.2rem;
+                                    &>a.link-darker {
+                                        color: $deepgray;
+                                        letter-spacing: 0rem;
+                                    }
+                                }
+                                >.metas {
+                                    font-size: 1.4rem;
+                                    >span.comment {
+                                        /*!灰色免费*/
+                                        float: left;
+                                        color: #c1c1c1;
+                                        margin-left: 1.2rem;
+                                    }
+                                    >span.course-price-widget {
+                                        float: right;
+                                        color: $red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .checkBoxs {
+                position: absolute;
+                right: 0rem;
+                font: $font;
+                font-size: 1.4rem;
+                height: 4.2rem;
+                line-height: 4.2rem;
+                margin-top: 1rem;
+                width: 18%;
+                float: left;
+                background-color: transparent;
+                border: $border;
+                border-left: transparent;
+            }
+        }
+        div#test1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            div.layui-box {
+                /*!分页*/
+            }
+        }
+    }
+}
